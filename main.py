@@ -1,0 +1,23 @@
+from fastapi import FastAPI, HTTPException, Request
+from schema import ContactForm
+from mailing import send_email
+from slowapi.util import get_remote_address
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+
+
+app = FastAPI()
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)  # type: ignore
+
+
+@app.post("/contact")
+@limiter.limit("5/minute")
+async def contact(request: Request, form: ContactForm):
+    try:
+        send_email(form)
+    except Exception:
+        raise HTTPException(status_code=500, detail="Failed to send message")
+    return {"status": "success", "message": "Message sent"}

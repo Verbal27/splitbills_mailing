@@ -4,9 +4,20 @@ from mailing import send_email
 from slowapi.util import get_remote_address
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://splitbills.com",
+        "https://www.splitbills.com",
+    ],
+    allow_methods=["POST"],
+    allow_headers=["Content-Type"],
+)
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter

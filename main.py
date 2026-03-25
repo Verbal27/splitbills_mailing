@@ -12,8 +12,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://splitbills.com",
-        "https://www.splitbills.com",
+        "https://splitbills.org",
+        "https://www.splitbills.org",
     ],
     allow_methods=["POST"],
     allow_headers=["Content-Type"],

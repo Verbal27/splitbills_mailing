@@ -128,7 +128,6 @@ opacity: 1;
 input.invalid,
 textarea.invalid {
   border-color: #e74c3c;
-  background-color: #fff0f0;
 }
 
 .form-feedback {

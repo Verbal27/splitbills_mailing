@@ -15,8 +15,9 @@ app.add_middleware(
         "https://splitbills.org",
         "https://www.splitbills.org",
     ],
-    allow_methods=["POST", "OPTIONS"],
-    allow_headers=["Content-Type"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 limiter = Limiter(key_func=get_remote_address)

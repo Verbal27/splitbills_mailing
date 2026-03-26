@@ -117,6 +117,18 @@ transition: opacity 0.3s ease;
 .form-feedback.show {
 opacity: 1;
 }
+.input-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: none;
+}
+
+input.invalid,
+textarea.invalid {
+  border-color: #e74c3c;
+  background-color: #fff0f0;
+}
 
 footer { background:#080d14; padding:2rem 8vw; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
 .footer-name { font-family:var(--serif); color:rgba(255,255,255,0.4); font-size:0.85rem; }

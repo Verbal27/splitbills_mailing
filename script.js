@@ -1,30 +1,66 @@
+const form = document.getElementById("contact-form");
+const button = form.querySelector("button");
+const feedback = document.createElement("div");
+feedback.id = "form-feedback";
+feedback.className = "form-feedback";
+feedback.setAttribute("role", "status");
+feedback.setAttribute("aria-live", "polite");
+form.appendChild(feedback);
 
-  const form = document.getElementById("contact-form");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  button.disabled = true;
+  button.classList.add("loading");
+  button.firstChild.textContent = "Sending…";
+  form.style.pointerEvents = "none";
 
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
+  feedback.textContent = "Sending your message…";
+  feedback.style.color = "#888";
+  feedback.classList.add("show");
 
-    try {
-      const res = await fetch("https://api.splitbills.org/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
 
-      if (!res.ok) throw new Error();
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  const startTime = Date.now();
 
-      alert("Message sent!");
-      form.reset();
+  try {
+    const res = await fetch("https://api.splitbills.org/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+      signal: controller.signal,
+    });
 
-    } catch (err) {
-      alert("Failed to send message");
+    const elapsed = Date.now() - startTime;
+    if (elapsed < 500) await new Promise((r) => setTimeout(r, 500 - elapsed));
+
+    if (!res.ok) throw new Error("Server error");
+
+    feedback.textContent = "Message sent successfully ✓";
+    feedback.style.color = "green";
+    button.firstChild.textContent = "Sent ✓";
+    form.reset();
+  } catch (err) {
+    if (err.name === "AbortError") {
+      feedback.textContent = "Request timed out. Please try again.";
+    } else {
+      feedback.textContent = "Failed to send message. Try again.";
     }
-  });
+    feedback.style.color = "red";
+    button.firstChild.textContent = "Send Message";
+  } finally {
+    clearTimeout(timeout);
+    setTimeout(() => {
+      button.disabled = false;
+      button.classList.remove("loading");
+      button.firstChild.textContent = "Send Message";
+      form.style.pointerEvents = "auto";
+    }, 2000);
+  }
+});

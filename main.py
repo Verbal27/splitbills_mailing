@@ -12,8 +12,8 @@ app = FastAPI(redirect_slashes=False)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://splitbills.org",
-        "https://www.splitbills.org",
+        "https://ionganea.org",
+        "https://www.ionganea.org",
     ],
     allow_credentials=True,
     allow_methods=["*"],

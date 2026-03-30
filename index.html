@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ion Ganea — Python Developer</title>
+<title>Ion Ganea — Software Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,6 +13,7 @@
   <a href="#" class="nav-logo">Ion Ganea</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -20,12 +21,13 @@
 
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Junior Python Developer · Chisinau, Moldova</p>
+    <p class="hero-eyebrow">Software Developer · Chisinau, Moldova</p>
     <h1 class="hero-name">Ion<br>Ganea</h1>
     <p class="hero-bio">
-      I build and deploy RESTful APIs with Django REST Framework and FastAPI —
-      from database design and JWT authentication through to production on
-      self-hosted Ubuntu infrastructure.
+      I build and deploy RESTful APIs and full-stack web applications — from
+      database design and JWT authentication to production on self-hosted Ubuntu
+      infrastructure. Currently leading development of a full-stack e-commerce
+      platform in active production practice.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -35,8 +37,8 @@
   <div class="hero-right">
     <div class="hero-right-inner">
       <div class="hero-stat">
-        <div class="stat-num">2</div>
-        <div class="stat-label">Live API projects</div>
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Live projects</div>
       </div>
       <div class="hero-stat">
         <div class="stat-num">3+</div>
@@ -47,8 +49,8 @@
         <div class="stat-label">Computer Science</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-num">Self</div>
-        <div class="stat-label">Hosted infrastructure</div>
+        <div class="stat-num">1yr</div>
+        <div class="stat-label">Dev experience</div>
       </div>
     </div>
   </div>
@@ -61,7 +63,7 @@
       <div class="section-rule"></div>
       <h2 class="section-title">Backend developer with a project lead mindset</h2>
       <p class="about-body">
-        Junior Python Developer with a BSc in Computer Science from Moldova State University
+        Software Developer with a BSc in Computer Science from Moldova State University
         and practical experience building and deploying RESTful APIs with Django REST
         Framework and FastAPI.
       </p>
@@ -85,6 +87,8 @@
         <span class="chip">Git</span>
         <span class="chip">Swagger</span>
         <span class="chip">NodeJS</span>
+        <span class="chip">Bootstrap</span>
+        <span class="chip">Railway</span>
       </div>
       <div class="cert-badge">
         <span class="cert-badge-icon">🎓</span>
@@ -129,6 +133,61 @@
   </div>
 </section>
 
+<section id="experience">
+  <p class="section-label">Experience</p>
+  <div class="section-rule"></div>
+  <h2 class="section-title">Where I've worked</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <span class="timeline-date">Oct 2025 — Present</span>
+        <span class="timeline-dot"></span>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-company">Encrono</p>
+        <h3 class="timeline-role">Junior Python Developer <span>· Production Practice</span></h3>
+        <p class="timeline-desc">Leading full-stack development of an electronics e-commerce platform. Built custom email-based auth, session cart, multi-step checkout, and hierarchical product catalogue. Containerised with Docker; code quality enforced via pre-commit hooks (Ruff, Flake8).</p>
+        <div class="timeline-tech">
+          <span>Django 5.2</span><span>MySQL</span><span>Bootstrap 5</span><span>Docker</span><span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <span class="timeline-date">Apr 2025 — Sep 2025</span>
+        <span class="timeline-dot"></span>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-company">Mentored by Artur Spatari, Tech Lead (15 yrs exp.)</p>
+        <h3 class="timeline-role">Junior Python Developer <span>· Mentorship</span></h3>
+        <p class="timeline-desc">Structured mentorship focused on professional REST API design and third-party integrations. Designed and built the SplitBills API in both Django REST Framework and FastAPI. Set up and administered a personal Ubuntu server for portfolio hosting.</p>
+        <div class="timeline-tech">
+          <span>Django REST</span><span>FastAPI</span><span>PostgreSQL</span><span>JWT</span><span>Ubuntu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <span class="timeline-date">Jun 2024 — Mar 2025</span>
+        <span class="timeline-dot"></span>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-company">ADM Ltd, London</p>
+        <h3 class="timeline-role">Site Supervisor</h3>
+        <p class="timeline-desc">Led on-site coordination across contractors, architects, and engineers. Managed cost estimation, resource planning, and safety compliance — skills that now translate directly into agile teamwork and deadline-driven engineering.</p>
+        <div class="timeline-tech">
+          <span>Project Management</span><span>Stakeholder Communication</span><span>Budgeting</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section id="projects">
   <p class="section-label">Projects</p>
   <div class="section-rule"></div>
@@ -151,7 +210,8 @@
           <span>Swagger</span><span>Gunicorn</span><span>Nginx</span>
         </div>
         <div class="project-links">
-          <a href="https://django.splitbills.org/api/schema/swagger-ui/" class="project-link" target="_blank" rel="noopener">Live demo</a>
+          <a href="https://splitbills.org" class="project-link" target="_blank" rel="noopener">Overview</a>
+          <a href="https://django.splitbills.org/api/schema/swagger-ui/" class="project-link" target="_blank" rel="noopener">Swagger</a>
           <a href="https://github.com/Verbal27" class="project-link gh" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -173,7 +233,8 @@
           <span>PostgreSQL</span><span>Uvicorn</span>
         </div>
         <div class="project-links">
-          <a href="https://fastapi.splitbills.org/docs" class="project-link" target="_blank" rel="noopener">Live demo</a>
+          <a href="https://splitbills.org" class="project-link" target="_blank" rel="noopener">Overview</a>
+          <a href="https://fastapi.splitbills.org/docs" class="project-link" target="_blank" rel="noopener">Swagger</a>
           <a href="https://github.com/Verbal27" class="project-link gh" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -181,20 +242,21 @@
 
     <div class="project-card">
       <div class="project-header">
-        <p class="project-tag">Python · Open Source</p>
-        <h3 class="project-name">GitHub<br>Contributions</h3>
+        <p class="project-tag">Django · MySQL · Bootstrap 5</p>
+        <h3 class="project-name">Electronics<br>E-commerce <span>· Full-stack</span></h3>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          A collection of backend learning projects exploring CRUD APIs, SQL and NoSQL
-          database integrations, OOP design patterns, and secure coding practices — all
-          publicly available on GitHub.
+          A full-stack web store built in active production practice. Features a hierarchical
+          product catalogue, session-based cart, multi-step checkout, custom email-based
+          auth, order management, and an admin panel. Containerised with Docker.
         </p>
         <div class="project-tech">
-          <span>Python</span><span>PostgreSQL</span><span>MongoDB</span><span>OOP</span><span>REST</span>
+          <span>Django 5.2</span><span>MySQL</span><span>Bootstrap 5</span>
+          <span>Docker</span><span>JavaScript</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/Verbal27" class="project-link" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/Verbal27/electronics_app" class="project-link gh" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </div>
@@ -209,24 +271,25 @@
       <div class="section-rule" style="background:var(--accent2)"></div>
       <h2 class="section-title">Let's talk</h2>
       <p class="contact-intro">
-        Open to junior developer roles, freelance backend work, and interesting API problems.
+        Open to developer roles, freelance backend work, and interesting API problems.
         Drop me a line — I reply promptly.
       </p>
       <div class="contact-links">
         <a href="mailto:ionganea77@gmail.com" class="contact-link">
-          <span class="contact-link-icon">✉</span>
+          <span class="contact-link-icon"><i class="fa-regular fa-envelope"></i></span>
           ionganea77@gmail.com
         </a>
+        </a>
         <a href="tel:+37369182748" class="contact-link">
-          <span class="contact-link-icon">☎</span>
+          <span class="contact-link-icon"><i class="fa-solid fa-phone"></i></span>
           +373 69 182 748
         </a>
         <a href="https://github.com/Verbal27" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-icon">GH</span>
+          <span class="contact-link-icon"><i class="fa-brands fa-github"></i></span>
           github.com/Verbal27
         </a>
         <a href="https://linkedin.com/in/ionganea" class="contact-link" target="_blank" rel="noopener">
-          <span class="contact-link-icon">in</span>
+          <span class="contact-link-icon"><i class="fa-brands fa-linkedin"></i></span>
           linkedin.com/in/ionganea
         </a>
       </div>
@@ -261,11 +324,12 @@
   <div class="footer-links">
     <a href="https://github.com/Verbal27" target="_blank" rel="noopener">GitHub</a>
     <a href="https://linkedin.com/in/ionganea" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://django.splitbills.org/api/schema/swagger-ui/" target="_blank" rel="noopener">SplitBill Django</a>
-    <a href="https://fastapi.splitbills.org/docs" target="_blank" rel="noopener">SplitBill FastAPI</a>
+    <a href="https://splitbills.org" target="_blank" rel="noopener">SplitBills</a>
+    <a href="https://github.com/Verbal27/electronics_app" target="_blank" rel="noopener">Electronics App</a>
   </div>
-  <span class="footer-copy">© 2025 · Self-hosted on Ubuntu · Chisinau, Moldova</span>
+  <span class="footer-copy">© 2026 · Self-hosted on Ubuntu · Chisinau, Moldova</span>
 </footer>
 <script src="script.js"></script>
+<script src="https://kit.fontawesome.com/419ff27973.js" crossorigin="anonymous"></script>
 </body>
 </html>

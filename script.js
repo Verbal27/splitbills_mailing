@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch("https://api.splitbills.org/contact", {
+      const response = await fetch("https://ionganea.org/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
